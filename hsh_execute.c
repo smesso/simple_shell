@@ -3,7 +3,6 @@
 #define MAX_COMMAND_LENGTH 1024
 #define MAX_ARGUMENTS 64
 
-// Function prototypes
 int lsh_cd(char **args);
 int lsh_help(char **args);
 int lsh_exit(char **args);
@@ -11,7 +10,6 @@ int lsh_ctrld(char **args);
 int lsh_num_builtins(void);
 int _fork_fun(char **arg, char **av, char **env, char *lineptr, int np, int c);
 
-// List of builtin commands, followed by their corresponding functions.
 char *builtin_str[] = {"cd", "help", "exit", "^D"};
 
 int (*builtin_func[]) (char **) = {&lsh_cd, &lsh_help, &lsh_exit, &lsh_ctrld};
